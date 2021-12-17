@@ -1,0 +1,63 @@
+- name: cpi
+  path: /releases/-
+  type: replace
+  value:
+    name: bosh-vsphere-cpi
+    sha1: e1ecff19aef2cf99e1512dc8b2c49965d5b94132
+    url: https://bosh.io/d/github.com/cloudfoundry/bosh-vsphere-cpi-release?v=58
+    version: 58
+- name: stemcell
+  path: /resource_pools/name=default/stemcell?
+  type: replace
+  value:
+    sha1: 69f9bfe7517a848f28f443f2833b287d7a692177
+    url: https://storage.googleapis.com/bosh-core-stemcells/1.34/bosh-stemcell-1.34-vsphere-esxi-ubuntu-bionic-go_agent.tgz
+- path: /resource_pools/name=default/cloud_properties?
+  type: replace
+  value:
+    cpu: 2
+    disk: 40000
+    ram: 4096
+- path: /networks/name=default/subnets/0/cloud_properties?
+  type: replace
+  value:
+    name: ((lan_network_name))
+- path: /cloud_provider/template?
+  type: replace
+  value:
+    name: vsphere_cpi
+    release: bosh-vsphere-cpi
+- path: /cloud_provider/properties/vcenter?
+  type: replace
+  value:
+    address: ((vcenter_ip))
+    datacenters:
+    - clusters:
+      - ((vcenter_cluster)): {}
+      datastore_pattern: ((vcenter_ds))
+      disk_path: ((vcenter_disks))
+      name: ((vcenter_dc))
+      persistent_datastore_pattern: ((vcenter_ds))
+      template_folder: ((vcenter_templates))
+      vm_folder: ((vcenter_vms))
+    password: ((vcenter_password))
+    user: ((vcenter_user))
+
+# vsphere network vip -> manual 
+- path: /networks/name=vip
+  type: remove
+- path: /networks/-
+  type: replace
+  value:
+    name: vip
+    type: manual
+    subnets:
+    - range: ((wan_network))/((wan_network_mask_bits))
+      gateway: ((wan_gateway))
+      static:
+      - ((wan_ip))
+      dns: [8.8.8.8]
+- path: /networks/name=vip/subnets/0/cloud_properties?
+  type: replace
+  value:
+    name: ((wan_network_name))
