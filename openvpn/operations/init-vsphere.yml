@@ -61,3 +61,9 @@
   type: replace
   value:
     name: ((wan_network_name))
+- path: /instance_groups/name=openvpn/networks/0/default?
+  type: remove
+- path: /instance_groups/name=openvpn/networks/1/default?
+  type: replace
+  value: [dns, gateway]
+
