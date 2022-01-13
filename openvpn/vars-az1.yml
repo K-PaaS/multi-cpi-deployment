@@ -11,6 +11,10 @@ vpn_network_mask_bits: "24"                       # ex) 24
 remote_network_cidr_block: "XXX.XXX.XXX.XXX/24"   # ex) 20.0.20.0/24
 remote_vpn_ip: "XXX.XXX.XXX.XXX"                  # Used by OpenVPN Server-2 ip 
 
+## add client remote info
+remote_network_cidr_block_add: "XXX.XXX.XXX.XXX/24"   # ex) 30.0.30.0/24
+remote_vpn_ip_add: "XXX.XXX.XXX.XXX"                  # Used by OpenVPN Server-3 ip 
+
 #### IaaS :: AWS
 #access_key_id: "XXXXXXXXXXXXXXX"                  # AWS Access Key
 #secret_access_key: "XXXXXXXXXXXXXXX"              # AWS Secret Key

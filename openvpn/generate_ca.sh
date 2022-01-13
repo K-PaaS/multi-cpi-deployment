@@ -8,3 +8,8 @@ bosh int operations/vpn-ca-server.yml \
   -l vars-az2.yml \
   --vars-store=creds/vpn-server-az2.yml
 
+echo "create vpn-server-az3....."
+bosh int operations/vpn-ca-server.yml \
+  -l vars-az3.yml \
+  --vars-store=creds/vpn-server-az3.yml
+
