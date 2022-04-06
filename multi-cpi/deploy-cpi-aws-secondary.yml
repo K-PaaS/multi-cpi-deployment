@@ -3,9 +3,9 @@
   path: /releases/-
   value:
     name: bosh-aws-cpi
-    version: 86
-    url: https://bosh.io/d/github.com/cloudfoundry/bosh-aws-cpi-release?v=86
-    sha1: f1116dc3f8e473f635e080f67a47d083809bebeb
+    version: 93
+    url: https://bosh.io/d/github.com/cloudfoundry/bosh-aws-cpi-release?v=93
+    sha1: 1b4d0f542faa1b8e6fd5aaae375073ecf7833291
 
 - type: replace
   path: /instance_groups/name=bosh/jobs/-

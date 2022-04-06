@@ -3,9 +3,9 @@
   path: /releases/-
   value:
     name: bosh-openstack-cpi
-    version: 44
-    url: https://bosh.io/d/github.com/cloudfoundry/bosh-openstack-cpi-release?v=44
-    sha1: 7c9be83eb11214db85ef5320f26ec9db8fab353f
+    version: 46
+    url: https://bosh.io/d/github.com/cloudfoundry/bosh-openstack-cpi-release?v=46
+    sha1: aec512de92c14784cc90036dcc1e24a0c8bf7371
 
 - type: replace
   path: /instance_groups/name=bosh/jobs/-
