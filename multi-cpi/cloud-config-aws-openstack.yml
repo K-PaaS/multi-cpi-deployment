@@ -82,7 +82,7 @@ networks:
   subnets:
   - az: z1
     cloud_properties:
-      security_groups: paasta-v50-security
+      security_groups: ap-v50-security
       subnet: subnet-XXXXXXXXXXXXXXXXX
     dns:
     - 8.8.8.8
@@ -94,7 +94,7 @@ networks:
     - 10.0.1.10 - 10.0.1.120
   - az: z2
     cloud_properties:
-      security_groups: paasta-v50-security
+      security_groups: ap-v50-security
       subnet: subnet-XXXXXXXXXXXXXXXXX
     dns:
     - 8.8.8.8
@@ -106,7 +106,7 @@ networks:
     - 10.1.41.10 - 10.1.41.120
   - az: z3
     cloud_properties:
-      security_groups: paasta-v50-security
+      security_groups: ap-v50-security
       subnet: subnet-XXXXXXXXXXXXXXXXX
     dns:
     - 8.8.8.8
@@ -122,7 +122,7 @@ networks:
       name: random
       net_id: 657712d9-1948-4e6b-96fb-d6164a530dff
       security_groups:
-      - paasta2
+      - ap2
     dns:
     - 8.8.8.8
     gateway: 10.0.121.1
@@ -136,7 +136,7 @@ networks:
       name: random
       net_id: 657712d9-1948-4e6b-96fb-d6164a530dff
       security_groups:
-      - paasta2
+      - ap2
     dns:
     - 8.8.8.8
     gateway: 10.0.161.1
@@ -150,7 +150,7 @@ networks:
       name: random
       net_id: 657712d9-1948-4e6b-96fb-d6164a530dff
       security_groups:
-      - paasta2
+      - ap2
     dns:
     - 8.8.8.8
     gateway: 10.0.201.1
@@ -162,7 +162,7 @@ networks:
 
   - az: z7
     cloud_properties:
-      security_groups: paasta-v50-security
+      security_groups: ap-v50-security
       subnet: subnet-XXXXXXXXXXXXXXXXX
     dns:
     - 8.8.8.8
@@ -180,9 +180,9 @@ networks:
 properties:
   aws:
     access_key_id: "XXXXXXXXXXXXXXXXXXX"
-    default_key_name: aws-paasta-rnd-v50-inception.pem
+    default_key_name: aws-ap-rnd-v50-inception.pem
     default_security_groups:
-    - paasta-v50-security
+    - ap-v50-security
     region: ap-northeast-2
     secret_access_key: "XXXXXXXXXXXXXXXXXXXXXX"
 
