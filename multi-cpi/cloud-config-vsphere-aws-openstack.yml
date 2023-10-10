@@ -5,7 +5,7 @@ azs:
     datacenters:
     - clusters:
       - BD-HA:
-          resource_pool: BOSH2_PAASTA_40_Pools
+          resource_pool: BOSH2_AP_40_Pools
       name: BD-HA
 - name: z2
   cpi: vsphere-cpi
@@ -13,7 +13,7 @@ azs:
     datacenters:
     - clusters:
       - BD-HA:
-          resource_pool: BOSH2_PAASTA_40_Pools
+          resource_pool: BOSH2_AP_40_Pools
       name: BD-HA
 
 - name: z3
@@ -40,7 +40,7 @@ azs:
     datacenters:
     - clusters:
       - BD-HA:
-          resource_pool: BOSH2_PAASTA_40_Pools
+          resource_pool: BOSH2_AP_40_Pools
       name: BD-HA
 
 vm_types:
@@ -330,7 +330,7 @@ networks:
       name: "Internal"
   - azs: [z3,z4]
     cloud_properties:
-      security_groups: paasta-v50-security
+      security_groups: ap-v50-security
       subnet: subnet-XXXXXXXXXXXXXXXXX
     dns:
     - 8.8.8.8
@@ -345,7 +345,7 @@ networks:
       name: random
       net_id: 657712d9-1948-4e6b-96fb-d6164a530dff
       security_groups:
-      - paasta2
+      - ap2
     dns:
     - 8.8.8.8
     gateway: 30.0.0.1
