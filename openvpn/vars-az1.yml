@@ -16,7 +16,7 @@ remote_vpn_ip: "XXX.XXX.XXX.XXX"                  # Used by OpenVPN Server-2 ip
 #secret_access_key: "XXXXXXXXXXXXXXX"              # AWS Secret Key
 #region: "ap-northeast-2"                          # AWS Region
 #availability_zone: "ap-northeast-2a"              # AWS Region
-#subnet_id: "paasta-subnet"                        # AWS Subnet ex) subnet-0ebc.....
+#subnet_id: "ap-subnet"                            # AWS Subnet ex) subnet-0ebc.....
 #default_security_groups: ["bosh-sg"]              # AWS Security-Group
 #bootstrap_ssh_key_name: "bosh-key"                # AWS SSH Private Key Name
 #bootstrap_ssh_key_path: "/.ssh/bosh-key.pem"      # AWS SSH Private Key Path
@@ -31,7 +31,7 @@ remote_vpn_ip: "XXX.XXX.XXX.XXX"                  # Used by OpenVPN Server-2 ip
 #openstack_password: "XXXXXXXXXXXXXXX"             # Openstack User Password
 #openstack_username: "XXXXXXXXXXXXXXX"             # Openstack User Name
 #openstack_domain: "default"                       # Openstack Domain Name
-#openstack_project: "paasta"                       # Openstack Project
+#openstack_project: "ap"                           # Openstack Project
 #private_key: "/.ssh/bosh-key.pem"                 # Openstack SSH Private Key Path
 #region: "RegionOne"                               # Openstack Region
 
